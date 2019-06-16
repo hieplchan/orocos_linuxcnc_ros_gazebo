@@ -1,0 +1,361 @@
+<robot
+  name="robotarm">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.334997829745637 1.51909244796656 0.0698252024971737"
+        rpy="0 0 0" />
+      <mass
+        value="45.1007511020516" />
+      <inertia
+        ixx="1.18691387219348"
+        ixy="0.363371541073851"
+        ixz="-0.0186992198533091"
+        iyy="1.371651650507"
+        iyz="0.0150255207586185"
+        izz="2.38903477727668" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.0338386605308316 0.018300364469833 0.27486889662987"
+        rpy="0 0 0" />
+      <mass
+        value="47.9939857282139" />
+      <inertia
+        ixx="2.26462000250491"
+        ixy="0.104482430238607"
+        ixz="-0.357347896161959"
+        iyy="1.75194665529876"
+        iyz="0.0193189911462361"
+        izz="1.63365818144129" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="continuous">
+    <origin
+      xyz="0.260383312678405 1.57667304526058 0.163999999999255"
+      rpy="3.50463330299809E-17 5.02086281998126E-17 2.18018826342241" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="0.0508731045195976 -0.00653041806792598 0.321534281626311"
+        rpy="0 0 0" />
+      <mass
+        value="15.8929704153453" />
+      <inertia
+        ixx="0.642112396550046"
+        ixy="0.00117650675403401"
+        ixz="0.0234641677337593"
+        iyy="0.630494054637444"
+        iyz="0.00075630568674962"
+        izz="0.0852091581782973" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="continuous">
+    <origin
+      xyz="0.0999999999999999 0 0.440000000000744"
+      rpy="0 -0.784351364725873 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="-0.000930022807398956 -0.0157392040975786 0.116199166237007"
+        rpy="0 0 0" />
+      <mass
+        value="14.5706810741409" />
+      <inertia
+        ixx="0.114594460248396"
+        ixy="-0.00406394567716067"
+        ixz="-0.0191689791933849"
+        iyy="0.328227666660739"
+        iyz="0.00362096592186976"
+        izz="0.336993158260921" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="continuous">
+    <origin
+      xyz="0 0 0.704999999999995"
+      rpy="0 0.217028333188875 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="0.177250199789439 0.00108453502179584 0.000300735054452494"
+        rpy="0 0 0" />
+      <mass
+        value="6.40519117477741" />
+      <inertia
+        ixx="0.0158028593689447"
+        ixy="-0.00138022633338833"
+        ixz="-0.000132620430518972"
+        iyy="0.183117638691561"
+        iyz="-1.39681053893045E-05"
+        izz="0.1865224147606" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="continuous">
+    <origin
+      xyz="0.386986083844331 -0.00549999999999629 0.134999999998731"
+      rpy="2.63448690583546 -3.38618022510673E-15 -3.44169137633799E-15" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="-0.00023020261005291 0.00383775036131606 0.00089913014257248"
+        rpy="0 0 0" />
+      <mass
+        value="0.371991104476391" />
+      <inertia
+        ixx="0.000356518121556333"
+        ixy="-1.14690783244773E-07"
+        ixz="2.45919029928787E-06"
+        iyy="0.000549795384654687"
+        iyz="4.47422640462007E-07"
+        izz="0.000334715275043181" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="continuous">
+    <origin
+      xyz="0.375013916156268 0 0"
+      rpy="5.86373782170392E-17 -0.32800966477142 -1.17274756434078E-16" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link6">
+    <inertial>
+      <origin
+        xyz="0.146758489132538 -0.000679964075426032 -0.002568653622673"
+        rpy="0 0 0" />
+      <mass
+        value="1.34069211541574" />
+      <inertia
+        ixx="0.00293346032246668"
+        ixy="-1.0016656123449E-06"
+        ixz="-8.3358548750819E-07"
+        iyy="0.00437356475263951"
+        iyz="5.39280361902951E-06"
+        izz="0.00438588314824453" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="1.8051870523497 -1.1392553567191E-12 -1.78812520346128E-12" />
+    <parent
+      link="link5" />
+    <child
+      link="link6" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+</robot>

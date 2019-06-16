@@ -1,0 +1,332 @@
+<sdf version='1.6'>
+  <model name='robotarm'>
+    <link name='base_link'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.334998 1.51909 0.069825 0 -0 0</pose>
+        <mass>45.1008</mass>
+        <inertia>
+          <ixx>1.18691</ixx>
+          <ixy>0.363372</ixy>
+          <ixz>-0.0186992</ixz>
+          <iyy>1.37165</iyy>
+          <iyz>0.0150255</iyz>
+          <izz>2.38903</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name='link1'>
+      <pose frame=''>0.260383 1.57667 0.164 0 0 2.18019</pose>
+      <inertial>
+        <pose frame=''>0.033839 0.0183 0.274869 0 -0 0</pose>
+        <mass>47.994</mass>
+        <inertia>
+          <ixx>2.26462</ixx>
+          <ixy>0.104482</ixy>
+          <ixz>-0.357348</ixz>
+          <iyy>1.75195</iyy>
+          <iyz>0.019319</iyz>
+          <izz>1.63366</izz>
+        </inertia>
+      </inertial>
+      <collision name='link1_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link1_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint1' type='revolute'>
+      <child>link1</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='link2'>
+      <pose frame=''>0.203146 1.65867 0.604 0 -0.784351 2.18019</pose>
+      <inertial>
+        <pose frame=''>0.050873 -0.00653 0.321534 0 -0 0</pose>
+        <mass>15.893</mass>
+        <inertia>
+          <ixx>0.642112</ixx>
+          <ixy>0.00117651</ixy>
+          <ixz>0.0234642</ixz>
+          <iyy>0.630494</iyy>
+          <iyz>0.000756306</iyz>
+          <izz>0.0852092</izz>
+        </inertia>
+      </inertial>
+      <collision name='link2_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link2_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint2' type='revolute'>
+      <child>link2</child>
+      <parent>link1</parent>
+      <axis>
+        <xyz>0.819996 0.572369 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='link3'>
+      <pose frame=''>0.488179 1.25032 1.10303 0 -0.567323 2.18019</pose>
+      <inertial>
+        <pose frame=''>-0.00093 -0.015739 0.116199 0 -0 0</pose>
+        <mass>14.5707</mass>
+        <inertia>
+          <ixx>0.114594</ixx>
+          <ixy>-0.00406395</ixy>
+          <ixz>-0.019169</ixz>
+          <iyy>0.328228</iyy>
+          <iyz>0.00362097</iyz>
+          <izz>0.336993</izz>
+        </inertia>
+      </inertial>
+      <collision name='link3_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link3_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint3' type='revolute'>
+      <child>link3</child>
+      <parent>link2</parent>
+      <axis>
+        <xyz>0.819996 0.572369 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='link4'>
+      <pose frame=''>0.347413 1.4616 1.42484 2.63449 -0.567323 2.18019</pose>
+      <inertial>
+        <pose frame=''>0.17725 0.001085 0.000301 0 -0 0</pose>
+        <mass>6.40519</mass>
+        <inertia>
+          <ixx>0.0158029</ixx>
+          <ixy>-0.00138023</ixy>
+          <ixz>-0.00013262</ixz>
+          <iyy>0.183118</iyy>
+          <iyz>-1.39681e-05</iyz>
+          <izz>0.186522</izz>
+        </inertia>
+      </inertial>
+      <collision name='link4_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link4.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link4_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link4.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint4' type='revolute'>
+      <child>link4</child>
+      <parent>link3</parent>
+      <axis>
+        <xyz>0.482703 -0.691538 -0.537376</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='link5'>
+      <pose frame=''>0.166393 1.72094 1.62636 2.70206 -0.274667 2.01691</pose>
+      <inertial>
+        <pose frame=''>-0.00023 0.003838 0.000899 0 -0 0</pose>
+        <mass>0.371991</mass>
+        <inertia>
+          <ixx>0.000356518</ixx>
+          <ixy>-1.14691e-07</ixy>
+          <ixz>2.45919e-06</ixz>
+          <iyy>0.000549795</iyy>
+          <iyz>4.47423e-07</iyz>
+          <izz>0.000334715</izz>
+        </inertia>
+      </inertial>
+      <collision name='link5_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link5.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link5_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link5.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint5' type='revolute'>
+      <child>link5</child>
+      <parent>link4</parent>
+      <axis>
+        <xyz>0.866178 0.286339 0.409569</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='link6'>
+      <pose frame=''>0.166393 1.72094 1.62636 -1.77594 -0.274667 2.01691</pose>
+      <inertial>
+        <pose frame=''>0.146758 -0.00068 -0.002569 0 -0 0</pose>
+        <mass>1.34069</mass>
+        <inertia>
+          <ixx>0.00293346</ixx>
+          <ixy>-1.00167e-06</ixy>
+          <ixz>-8.33585e-07</ixz>
+          <iyy>0.00437356</iyy>
+          <iyz>5.3928e-06</iyz>
+          <izz>0.00438588</izz>
+        </inertia>
+      </inertial>
+      <collision name='link6_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link6.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link6_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/hiep/Desktop/ros_linuxcnc_gazebo/gazebo_models/meshes/link6.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint6' type='revolute'>
+      <child>link6</child>
+      <parent>link5</parent>
+      <axis>
+        <xyz>0.415293 -0.868313 -0.271227</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <plugin name="joint_angle_control" filename="/home/hiep/Desktop/ros_linuxcnc_gazebo/joint_angle_control/build/libjoint_angle_control.so"/>
+  </model>
+</sdf>

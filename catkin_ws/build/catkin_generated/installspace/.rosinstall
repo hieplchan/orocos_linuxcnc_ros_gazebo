@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/hiep/Desktop/ros_linuxcnc_gazebo/catkin_ws/install/setup.sh

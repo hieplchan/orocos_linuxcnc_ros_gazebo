@@ -1,0 +1,2 @@
+joint_angle_msgs
+-DCATKIN_DEVEL_PREFIX=/home/hiep/Desktop/ros_linuxcnc_gazebo/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/hiep/Desktop/ros_linuxcnc_gazebo/catkin_ws/install -G Unix Makefiles

@@ -1,0 +1,8 @@
+prefix=/home/hiep/Desktop/ros_linuxcnc_gazebo/catkin_ws/install
+
+Name: joint_angle_msgs
+Description: Description of joint_angle_msgs
+Version: 0.0.0
+Cflags: -I/home/hiep/Desktop/ros_linuxcnc_gazebo/catkin_ws/install/include
+Libs: -L/home/hiep/Desktop/ros_linuxcnc_gazebo/catkin_ws/install/lib 
+Requires: message_runtime
